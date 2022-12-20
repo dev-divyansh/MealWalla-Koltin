@@ -1,5 +1,6 @@
 package com.divyansh.mealwalla
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -13,15 +14,35 @@ class Welcome : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        window.decorView.apply {
-            systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-        }
-        binding.imageView8.setOnClickListener {
-            Toast.makeText(this , "this is menu clicked" , Toast.LENGTH_SHORT).show()
-        }
         binding.imageView9.setOnClickListener {
-            Toast.makeText(this , "this is menu clicked" , Toast.LENGTH_SHORT).show()
-        }
+            var intent = Intent(this , main_menu :: class.java)
+            startActivity(intent)
 
+        }
+        binding.bottomNav.setOnItemSelectedListener{
+            when (it.itemId){
+                R.id.cart -> {
+                    var intent = Intent(this , cart :: class.java)
+                    startActivity(intent)
+                    true
+            }
+                R.id.profile -> {
+                    var intent = Intent(this , profile :: class.java)
+                    startActivity(intent)
+                    true
+            }
+                R.id.support -> {
+                    var intent = Intent(this , support:: class.java)
+                    startActivity(intent)
+
+                    true
+                }
+                else -> {
+                    Toast.makeText(this , "error" , Toast.LENGTH_SHORT).show()
+                    true
+                }
+            }
+
+        }
     }
 }

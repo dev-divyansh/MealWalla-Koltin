@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater )
         setContentView(binding.root)
 
-        var intent = Intent(this@MainActivity , Welcome::class.java)
+        var intent = Intent(this@MainActivity , login::class.java)
         startActivity(intent)
         finish()
 

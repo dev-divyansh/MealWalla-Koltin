@@ -6,4 +6,166 @@
     android:layout_height="match_parent"
     tools:context=".main_menu">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="73dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Order Your Delicious Meal"
+        android:textColor="@color/purple_700"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView2"
+        android:layout_width="397dp"
+        android:layout_height="496dp"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="328dp"
+                android:layout_height="424dp"
+                android:layout_margin="30dp"
+                android:elevation="30dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="30dp"
+                app:contentPadding="15dp">
+
+                <RadioGroup
+                    android:id="@+id/breakfast_choice"
+                    android:layout_width="309dp"
+                    android:layout_height="372dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="20dp"
+                        android:text="BreakFast"
+                        android:textSize="30dp" />
+
+                    <RadioButton
+                        android:id="@+id/dish1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="RadioButton" />
+
+                    <RadioButton
+                        android:id="@+id/dish2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="RadioButton" />
+                </RadioGroup>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="328dp"
+                android:layout_height="424dp"
+                android:layout_margin="30dp"
+                android:elevation="30dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="30dp"
+                app:contentPadding="15dp">
+
+                <RadioGroup
+                    android:id="@+id/lunch_choice"
+                    android:layout_width="349dp"
+                    android:layout_height="383dp"
+                    android:paddingLeft="20dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="20dp"
+                        android:text="Lunch"
+                        android:textSize="30dp" />
+
+                    <RadioButton
+                        android:id="@+id/dish3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="RadioButton" />
+
+                    <RadioButton
+                        android:id="@+id/dish4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="RadioButton" />
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="328dp"
+                android:layout_height="424dp"
+                android:layout_margin="30dp"
+                android:elevation="30dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="30dp"
+                app:contentPadding="15dp">
+
+                <RadioGroup
+                    android:id="@+id/dinner_choice"
+                    android:layout_width="349dp"
+                    android:layout_height="383dp"
+                    android:paddingLeft="20dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="20dp"
+                        android:text="Dinner"
+                        android:textSize="30dp" />
+
+                    <RadioButton
+                        android:id="@+id/dish5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="RadioButton" />
+
+                    <RadioButton
+                        android:id="@+id/dish6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="RadioButton" />
+                </RadioGroup>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="129dp"
+        android:layout_height="79dp"
+
+        android:src="@drawable/ic_baseline_shopping_cart_checkout_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
